@@ -16,32 +16,55 @@ namespace Workout.Test.Level1
 
         public void sum_numbers_to(int expected, int input)
         {
-            throw new NotImplementedException();
+            int result = SumNumbersTo(input);
+            Assert.AreEqual(expected, result);
         }
 
         public void sum_numbers_to_invalid_input(int input)
         {
-            throw new NotImplementedException();
+            Assert.ThrowsException<ArgumentException>(() => SumNumbersTo(input));
         }
 
         public int SumNumbersTo(int input)
         {
-            throw new NotImplementedException();
+            if (input < 1)
+                throw new ArgumentException("Input must be greater than 0.");
+
+            int sum = 0;
+            for (int i = 1; i <= input; i++)
+            {
+                sum += i;
+            }
+            return sum;
         }
 
         public int SumNumbersTo_Recursion(int input)
         {
-            throw new NotImplementedException();
+            if (input < 1)
+                throw new ArgumentException("Input must be greater than 0.");
+
+            return input == 1 ? 1 : input + SumNumbersTo_Recursion(input - 1);
         }
 
         public int SumNumbersTo_OneLineOfCode(int input)
         {
-            throw new NotImplementedException();
+            if (input < 1)
+                throw new ArgumentException("Input must be greater than 0.");
+
+            return input * (input + 1) / 2;
         }
 
         public int SumNumbersTo_WithoutLinq(int input)
         {
-            throw new NotImplementedException();
+            if (input < 1)
+                throw new ArgumentException("Input must be greater than 0.");
+
+            int sum = 0;
+            for (int i = 1; i <= input; i++)
+            {
+                sum += i;
+            }
+            return sum;
         }
 
     }

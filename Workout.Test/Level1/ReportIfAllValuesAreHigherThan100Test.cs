@@ -50,7 +50,7 @@ namespace Workout.Test.Level1
 
             //Checks if all numbers are greater than 100
 
-            return numbers.All(num => num > 100) ? "All numbers är 100 or higher" : "Some numbers are equal or lower than 100";
+            return numbers.All(num => num > 100) ? "Alla nummer är högre än 100" : "Något nummer är lägre än (eller lika med) 100";
 
             // if (numbers.All(num => num > 100))
             // {

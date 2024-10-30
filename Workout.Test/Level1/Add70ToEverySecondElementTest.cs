@@ -29,11 +29,14 @@ namespace Workout.Test.Level1
         {
             // Addera 70 till varannat element i listan
 
+            //Arrange - Setting up initial data and expected result
             var input = new List<int> { 1000, 2000, 3000, 4000, 5000 };
             var expected = new List<int> { 1000, 2070, 3000, 4070, 5000 };
 
+            //Act - The logic/action that does the testing
             var result = Add70ToEverySecondElement_Linq(input);
 
+            //Assert - Verifying that the result matches the expected output
             CollectionAssert.AreEqual(expected, result);
         }
 
