@@ -42,7 +42,24 @@ namespace Workout.Test.Level1
 
         public string ReportIfAllValuesAreHigherThan100(List<int> numbers)
         {
-            throw new NotImplementedException();
+            //Checks if the list is null or empty
+            if (numbers == null || numbers.Count == 0)
+            {
+                throw new ArgumentException("List cannot be null or empty.");
+            }
+
+            //Checks if all numbers are greater than 100
+
+            return numbers.All(num => num > 100) ? "All numbers är 100 or higher" : "Some numbers are equal or lower than 100";
+
+            // if (numbers.All(num => num > 100))
+            // {
+            //     return "Alla nummer är högre än 100";
+            // }
+            // else
+            // {
+            //     return "Något nummer är lägre än (eller lika med) 100";
+            // }
         }
 
     }

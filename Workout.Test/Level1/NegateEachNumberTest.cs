@@ -26,7 +26,7 @@ namespace Workout.Test.Level1
 
         public List<int> NegateEachNumber(List<int> numbers)
         {
-            throw new NotImplementedException();
+            return numbers.Select(n => n * (-1)).ToList();
         }
 
     }

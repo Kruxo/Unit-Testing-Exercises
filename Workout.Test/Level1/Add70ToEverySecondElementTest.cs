@@ -53,7 +53,7 @@ namespace Workout.Test.Level1
             // return numbers;
         }
 
-        public List<int> Add70ToEverySecondElement_Linq(List<int> numbers)
+        public List<int> Add70ToEverySecondElement_Linq(List<int> numbers) //This method is of type List<int> therefore we are expected to return something of the same type
         {
             numbers = numbers.Select((num, index) => index % 2 != 0 ? num + 70 : num).ToList();
             return numbers;

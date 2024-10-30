@@ -10,7 +10,7 @@ namespace Workout.Test.Level1
     [TestClass]
     public class SumNumbersDividedByThreeOrFiveTest
     {
-
+        //DataRow tests with expected output and input limit.
         [TestMethod]
         [DataRow(0, 1)]
         [DataRow(0, 2)]
@@ -23,14 +23,31 @@ namespace Workout.Test.Level1
         [DataRow(3 + 5 + 6 + 9, 9)]
         [DataRow(3 + 5 + 6 + 9 + 10, 10)]
 
+
         public void sum_numbers_divided_by_three_or_five(int expected, int input)
         {
-            throw new NotImplementedException();
+            //Write the test yourself here
+
+            // Act
+            int result = SumNumbersDividedByThreeOrFive(input);
+
+            // Assert
+            Assert.AreEqual(expected, result);
         }
 
         public int SumNumbersDividedByThreeOrFive(int input)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+
+            for (int i = 1; i <= input; i++)
+            {
+                if (i % 3 == 0 || i % 5 == 0)
+                {
+                    sum += i;
+                }
+            }
+
+            return sum;
         }
 
     }

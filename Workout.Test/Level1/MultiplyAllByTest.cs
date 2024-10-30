@@ -14,7 +14,7 @@ namespace Workout.Test.Level1
         [TestMethod]
         public void multiply_all_by_a_number()
         {
-            //  Multiplicera alla tal i listan med den första parametern
+            //  Multiplicera alla tal i listan med factor 
             var expected = new List<double> { 1200, 314, 5000, 9900 };
             var input = new List<double> { 12, 3.14, 50, 99 };
             CollectionAssert.AreEqual(expected, MultiplyAllBy(100, input));
@@ -27,7 +27,6 @@ namespace Workout.Test.Level1
         [TestMethod]
         public void multiply_all_by_a_number_linq()
         {
-
             var expected = new List<double> { 1200, 314, 5000, 9900 };
             var input = new List<double> { 12, 3.14, 50, 99 };
             CollectionAssert.AreEqual(expected, MultiplyAllBy_Linq(100, input));
@@ -39,12 +38,27 @@ namespace Workout.Test.Level1
 
         public List<double> MultiplyAllBy(int factor, List<double> numbers)
         {
-            throw new NotImplementedException();
+
+            if (numbers == null)
+            {
+                throw new ArgumentException("The list of numbers cannot be null.");
+            }
+
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                numbers[i] = factor * numbers[i];
+            }
+            return numbers;
         }
 
         public List<double> MultiplyAllBy_Linq(int factor, List<double> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                throw new ArgumentException("The list of numbers cannot be null.");
+            }
+
+            return numbers.Select(num => num * factor).ToList();
         }
 
     }

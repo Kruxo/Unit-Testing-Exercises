@@ -94,3 +94,4 @@ C:\Users\Hao\Documents\Skolprojekt\Brights-Learning\Workout-StudentVersion\Worko
 C:\Users\Hao\Documents\Skolprojekt\Brights-Learning\Workout-StudentVersion\Workout.Test\obj\Debug\net8.0\Workout.Test.pdb
 C:\Users\Hao\Documents\Skolprojekt\Brights-Learning\Workout-StudentVersion\Workout.Test\obj\Debug\net8.0\Workout.Test.genruntimeconfig.cache
 C:\Users\Hao\Documents\Skolprojekt\Brights-Learning\Workout-StudentVersion\Workout.Test\obj\Debug\net8.0\ref\Workout.Test.dll
+c:\Users\Hao\Documents\Skolprojekt\Brights-Learning\Workout-StudentVersion\Workout.Test\obj\Debug\net8.0\Workout.Test.sourcelink.json
